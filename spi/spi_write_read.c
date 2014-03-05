@@ -84,9 +84,13 @@ int main(void)
   *(spi_slave) = 0x01; 
 
   *(spi_write) = read;
+	    data=*(spi_read);
   *(spi_write) = addr1;
+	    data=*(spi_read);
   *(spi_write) = addr2;
+	    data=*(spi_read);
   *(spi_write) = addr3;
+	    data=*(spi_read);
   
   *(spi_state) = 0x02;
   do{
