@@ -18,14 +18,11 @@ unsigned char addr1 = 0xA0;
 unsigned char addr2 = 0xB0;
 unsigned char addr3 = 0x00;
 unsigned char data = 0x00;	
-unsigned char data1;
-unsigned char data2;
-unsigned char data3;
+
 
 int main(void)
 {
   int i=0;
-  int status;
 
 //write
   *(spi_base) = 0xFF;

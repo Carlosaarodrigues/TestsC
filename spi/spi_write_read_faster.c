@@ -18,9 +18,6 @@ unsigned char addr1 = 0xA0;
 unsigned char addr2 = 0xB0;
 unsigned char addr3 = 0x00;
 unsigned char data = 0x00;	
-unsigned char data1;
-unsigned char data2;
-unsigned char data3;
 
 int main(void)
 {
@@ -71,10 +68,10 @@ int main(void)
 
   *(spi_state) = 0x01;
   do{
-	if (spi_state[0]){  // tirar sem status  
+	//if (spi_state[0]){  // tirar sem status  
 	    data=*(spi_read);
   	    i++;
-	}
+	//}
   }while (i<150);
   *(spi_slave) = 0x00; 
 
@@ -93,10 +90,10 @@ int main(void)
   
   *(spi_state) = 0x01;
   do{
-	if (spi_state[0]){    // tirar sem status   
+	//if (spi_state[0]){    // tirar sem status   
 	    data=*(spi_read);
   	    i++;
-	}
+	//}
   }while (i<256);
   *(spi_slave) = 0x00; 
 
